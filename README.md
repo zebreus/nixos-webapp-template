@@ -1,15 +1,14 @@
-# nixos-webapp-template
+# example-webapp
 
 A template for a web app that deploys as a NixOS service.
 
 ## Quick start
 
-1. **Use this template** — click "Use this template" on GitHub or clone it.
+1. **Use this template** - click "Use this template" on GitHub or clone it.
 
-2. **Rename `example-webapp`** — replace every occurrence of `example-webapp`
-   across all files with your project name.
+2. **Rename the project** - this should happen automatically in a GitHub action.
 
-3. **Edit `main.ts`** — this is the Deno server entry point. It exports a
+3. **Edit `main.ts`** - this is the Deno server entry point. It exports a
    `fetch()` handler that Deno's built-in `deno serve` runs. Replace the
    placeholder HTML with your actual app. Use `nix develop .` to get a shell
    with Deno installed for development.
@@ -29,7 +28,7 @@ A template for a web app that deploys as a NixOS service.
 
 | File          | Purpose                                               |
 | ------------- | ----------------------------------------------------- |
-| `main.ts`     | Deno HTTP server — exports a `fetch()` handler        |
+| `main.ts`     | Deno HTTP server - exports a `fetch()` handler        |
 | `default.nix` | Nix derivation that wraps `deno serve` into a binary  |
 | `module.nix`  | NixOS module with options for host, port, data dir    |
 | `flake.nix`   | Flake exposing the package, module, overlay, and test |
